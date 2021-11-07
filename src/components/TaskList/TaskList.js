@@ -6,7 +6,7 @@ import Task from '../Task/Task';
 const TaskList = (props) => {
 	const { onDeleteItem, onLabelClicked, onEditItem, onChangeTime, tasks } = props;
 	const elements = tasks.map((item) =>
-		item.completed !== ' completed' ? (
+		item.completed !== 'completed' ? (
 			<Route
 				exact
 				path="/active"

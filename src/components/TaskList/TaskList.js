@@ -6,7 +6,7 @@ import TaskOnHook from "../Task/TaskOnHook";
 const TaskList = (props) => {
     const {tasks} = props;
     const elements = tasks.map((item) =>
-        item.completed !== ' completed' ? (
+        item.completed !== 'completed' ? (
             <Route
                 exact path="/active" render={() => (<TaskOnHook key={item.id} item={item}{...props}/>)}
             />

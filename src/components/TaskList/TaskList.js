@@ -39,7 +39,7 @@ const TaskList = (props) => {
 	const elementsAll = tasks.map((item) => (
 		<Route
 			exact
-			path="/all"
+			path="/"
 			render={() => (
 				<Task
 					item={item}
@@ -66,42 +66,5 @@ TaskList.propTypes = {
 	onChangeTime: PropTypes.func.isRequired,
 	tasks: PropTypes.instanceOf(Array).isRequired,
 };
-// class TaskList extends React.Component {
-//     render() {
-//         const {...tasks} = this.props;
-//         const elements = tasks.map(item => ((item.completed !== ' completed')
-//                 ? <Route exact path='/active' render={() =>
-//                     <Task item={item}
-//                           onDeleteItem={this.onDeleteItem}
-//                           onLabelClicked={this.onLabelClicked}
-//                           onEditItem={this.onEditItem}
-//                           onChangeTime={this.onChangeTime}
-//                     />}/>
-//                 : <Route exact path='/completed' render={() =>
-//                     <Task item={item}
-//                           onDeleteItem={this.onDeleteItem}
-//                           onLabelClicked={this.onLabelClicked}
-//                           onEditItem={this.onEditItem}
-//                           onChangeTime={this.onChangeTime}
-//                     />}/>
-//             )
-//         )
-//         const elementsAll = tasks.map(item => (
-//             <Route exact path='/all' render={() =>
-//                 <Task item={item}
-//                       onDeleteItem={this.onDeleteItem}
-//                       onLabelClicked={this.onLabelClicked}
-//                       onEditItem={this.onEditItem}
-//                       onChangeTime={this.onChangeTime}
-//                 />}/>)
-//         );
-//         return (
-//             <ul className="todo-list">
-//                 {elementsAll}
-//                 {elements}
-//             </ul>
-//         );
-//     }
-// }
 
 export default TaskList;
